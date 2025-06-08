@@ -22,7 +22,18 @@ int main() {
     printf("Nhap so (toi da 4 chu so): ");
     scanf_s("%d", &n);
 
-    if (n < 0 || n > 9999) {
+    while (n != 0) {
+        int temp = n % 10;
+        printf("%d\n", temp);
+        n = n / 10;
+    }
+
+    return 0;
+}
+   /* printf("Nhap so (toi da 4 chu so): ");
+    scanf_s("%d", &n);*/
+
+    /*if (n < 0 || n > 9999) {
         printf("So khong hop le!\n");
         return 1;
     }
@@ -64,5 +75,4 @@ int main() {
     }
 
     printf("\n");
-    return 0;
-}
+    return 0;*/
