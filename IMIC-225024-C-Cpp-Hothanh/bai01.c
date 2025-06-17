@@ -1,35 +1,32 @@
 ﻿#include <stdio.h>
-void tinh_diem_trung_binh(float diemTB) {
-    if (diemTB >= 8.0) {
-        printf("Hoc sinh xep loai: Gioi\n");
-    }
-    else if (diemTB >= 6.5) {
-        printf("Hoc sinh xep loai: Kha\n");
-    }
-    else if (diemTB >= 5.0) {
-        printf("Hoc sinh xep loai: Trung Binh\n");
-    }
-    else {
-        printf("Hoc sinh xep loai: Yeu\n");
-    }
-}
+#include <stdlib.h>
+#include <string.h>
+#include <windows.h>
 
 int main() {
-    float diemTB;
-    char kytu;
-    do {
-        // Nhập điểm trung bình từ bàn phím
-        do {
-            printf("Nhap diem trung binh cua hoc sinh: ");
-            scanf_s("%f", &diemTB);
-        } while (diemTB > 10 || diemTB < 0);
-        tinh_diem_trung_binh(diemTB);
-        // Dọn bộ đệm trước khi nhập ký tự
-        while ((getchar()) != '\n');  // Xóa kí tự Enter còn sót
-        printf("Nhan Y neu ban muon tiep tuc, nguoc lai nhap ky tu khac: ");
-        scanf_s("%c", &kytu, 1);
+    system("chcp 65001 > nul"); // Đặt bảng mã UTF-8 (ẩn output)
+    system("cls");
 
-    } while (kytu == 'Y' || kytu == 'y');
+    const char* text = "Changggg ʕっ•ᴥ•ʔっ❤️";
+    int text_len = strlen(text);
+
+    for (float y = 1.5f; y > -1.5f; y -= 0.15f) {
+        for (float x = -1.5f; x < 1.5f; x += 0.05f) {
+            float a = x * x + y * y - 1;
+            if (a * a * a - x * x * y * y * y <= 0.0f)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+
+    // Dự đoán chiều rộng terminal trái tim
+    int total_width = (int)((1.5f - (-1.5f)) / 0.05f);
+    int padding = (total_width - text_len) / 2;
+
+    for (int i = 0; i < padding; i++) printf(" ");
+    printf("%s\n", text);
 
     return 0;
 }
