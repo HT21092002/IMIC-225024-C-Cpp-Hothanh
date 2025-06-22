@@ -13,7 +13,7 @@ char* timKyTu(const char* str, char c) {
 }
 
 void main() {
-    const char* chuoi = "Xin chao ban!";
+     char* chuoi = "Xin chao ban!";
     char kyTuCanTim = 'c';
 
     char* ketQua = timKyTu(chuoi, kyTuCanTim);
