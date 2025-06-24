@@ -21,8 +21,5 @@
     <ClCompile Include="bai02.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bai03.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
