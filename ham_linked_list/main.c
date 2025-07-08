@@ -1,26 +1,34 @@
-﻿#include <stdio.h>
-#include "link_List.h"
-void main() {
-    linked_list_t myList;
+﻿
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "link_list.h"
 
-    // Bài 1: Create
-    Create(&myList);
-    printf("Linked list da tao.\n");
 
-    // Bài 2: GetLen (sau khi tạo, chưa có node nào)
-    printf("So phan tu ban dau: %d\n", GetLen(&myList));
+link_list_t ll_1;
+link_list_t ll_2;
+int main() {
 
-    // Bài 3: Add
-    Add(&myList, 10);
-    Add(&myList, 20);
-    Add(&myList, 30);
+    ll_create(&ll_1);
+    int len = ll_get_len(&ll_1);
+    ll_add_node(&ll_1, 10);
+    ll_add_node(&ll_1, 20);
+    ll_add_node(&ll_1, 30);
+    ll_add_node(&ll_1, 40);
 
-    printf("Da thêm 3 node vào danh sach.\n");
-    printf("so phan tu hien tai: %d\n", GetLen(&myList));
-    // Bài 09
-    printf("Gia tri o vi tri index 0: %d\n", GetValueIndex(&myList, 0)); // 10
-    printf("Gia tri o vi tri index 1: %d\n", GetValueIndex(&myList, 1)); // 20
-    printf("Gia tri o vi tri index 2: %d\n", GetValueIndex(&myList, 2)); // 30
-    printf("Thu index sai (-1): %d\n", GetValueIndex(&myList, -1));      // Lỗi
-    printf("Thu index qua gioi han: %d\n", GetValueIndex(&myList, 10));  // Lỗi
+    ll_print(&ll_1);
+
+    ll_insert_node(&ll_1, 100, 1);
+
+    printf("sau khi insert \n");
+    ll_print(&ll_1);
+
+    ll_remove_node(&ll_1, 3);
+
+    printf("sau khi remove \n");
+    ll_print(&ll_1);
+
+    printf("doi tuong 40 o vi tri: %d \n", ll_search(&ll_1, 400));
+
+    return 0;
 }

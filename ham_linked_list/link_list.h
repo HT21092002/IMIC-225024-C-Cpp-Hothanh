@@ -1,15 +1,20 @@
-﻿typedef struct node {
-    int value;
-    struct node* next_node_addr;
+﻿#pragma once
+typedef struct
+{
+	int value;
+	void* next_node_addr;
 } node_t;
 
-typedef struct {
-    node_t* root_node;
-    int len;
-} linked_list_t;
+typedef struct
+{
+	int len;
+	node_t* root_node_addr;
+} link_list_t;
 
-// Các hàm xử lý
-void Create(linked_list_t* list);
-int GetLen(linked_list_t* list);
-void Add(linked_list_t* list, int value);
-int GetValueIndex(linked_list_t* list, int index);
+void ll_create(link_list_t* ll);
+int ll_get_len(link_list_t* ll);
+void ll_add_node(link_list_t* ll, int val);
+void ll_insert_node(link_list_t* ll, int val, int index);
+void ll_remove_node(link_list_t* ll, int index);
+int ll_search(link_list_t* ll, int val);
+void ll_print(link_list_t* ll);
