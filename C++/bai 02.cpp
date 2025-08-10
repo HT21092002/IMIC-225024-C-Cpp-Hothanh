@@ -11,7 +11,7 @@
         printf("Phan so a: %d/%d\n", a.tu, a.mau);
         printf("Phan so b: %d/%d\n", b.tu, b.mau);
 
-        PhanSo c = a.nhan(b);
+        PhanSo c = a.operator*(b);
         printf("a * b = %d/%d\n", c.tu, c.mau);
 
         return 0;
