@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BAI 01.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="bai02.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="baivdfile.c">
+    <ClCompile Include="bai01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

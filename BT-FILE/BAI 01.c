@@ -39,13 +39,14 @@ void ghiFile(const char* tenFile, HocSinh ds[], int n) {
     fclose(f);
 }
 
-int main() {
+void main() {
+    //mở file
     FILE* fp = fopen("D:/BTC++/bai01/BT-FILE/x64/Debug/DanhSachHocSinh.csv", "r");
     if (fp == NULL) {
         printf("Khong the mo file DanhSachHocSinh.csv\n");
         return 1;
     }
-
+    //doc file
     HocSinh ds[MAX];
     int n = 0;
     char line[256];
@@ -67,9 +68,9 @@ int main() {
             printf("Dong sai dinh dang: %s\n", line);
         }
     }
-
+    //dong file
     fclose(fp);
-
+    //ghi file
     if (n == 0) {
         printf("Khong co du lieu hop le trong file.\n");
         return 1;
@@ -99,6 +100,6 @@ int main() {
 
     ghiFile("D:/BTC++/bai01/BT-FILE/x64/Debug/DanhSachSapXep.csv", ds, n);
     printf("\nDa ghi danh sach vao file DanhSachSapXep.csv\n");
-
-    return 0;
+    //dong file
+    fclose(fp);
 }
