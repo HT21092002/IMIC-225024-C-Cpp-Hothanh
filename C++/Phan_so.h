@@ -6,4 +6,5 @@ public:
 
     PhanSo();                  // Hàm tạo
     PhanSo operator*(PhanSo ps);    // Hành vi: nhân với phân số khác
+
 };
