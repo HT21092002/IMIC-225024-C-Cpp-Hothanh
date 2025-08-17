@@ -27,6 +27,9 @@
     <ClCompile Include="phan_so.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="bai03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hinh_hoc.h">
