@@ -1,10 +1,9 @@
-﻿
-﻿#include <stdio.h>
+﻿#include<stdio.h>
 #include <malloc.h>
 #include <iostream>
-#include "phan_so.h"
+#include "Phan_so.h"
 using namespace std;
-struct phan_so
+struct Phan_so
 {
 	int tu;
 	int mau;

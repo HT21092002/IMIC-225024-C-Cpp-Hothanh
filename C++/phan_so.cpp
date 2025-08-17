@@ -1,15 +1,29 @@
-﻿#include "phan_so.h"
-#include <stdio.h>
+﻿#include "Phan_so.h"
 
-PhanSo::PhanSo() {
-    printf("Ham tao duoc khoi chay\n");
-    tu = 0;
-    mau = 1; // tránh mẫu = 0
+phan_so::phan_so()
+{
+	tu = 0;
+	mau = 0;
 }
 
-PhanSo PhanSo::operator*(PhanSo ps) {
-    PhanSo kq;
-    kq.tu = tu * ps.tu;
-    kq.mau = mau * ps.mau;
-    return kq;
+phan_so::phan_so(int _tu, int _mau)
+{
+	tu = _tu;
+	mau = _mau;
+}
+
+phan_so phan_so::nhan_phan_so(phan_so khac)
+{
+	phan_so ketqua;
+	ketqua.tu = tu * khac.tu;
+	ketqua.mau = mau * khac.mau;
+	return ketqua;
+}
+
+phan_so phan_so::operator*(phan_so khac)
+{
+	phan_so ketqua;
+	ketqua.tu = tu * khac.tu;
+	ketqua.mau = mau * khac.mau;
+	return ketqua;
 }
